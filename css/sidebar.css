@@ -1,0 +1,7 @@
+header{
+    display: flex;
+    flex-direction: column;
+    height: 1200px;
+    width: 200px ;
+    border-right: 1px solid;
+}

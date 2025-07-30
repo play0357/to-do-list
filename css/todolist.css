@@ -1,0 +1,132 @@
+
+
+/* 헤더 */
+header {
+    margin: auto;
+    width: 300px;
+    text-align: center;
+}
+
+/* 메인 본체 */
+main{
+    width: 300px;
+    margin: auto;
+    
+    
+}
+.input{ /* to-do 입력 section */
+    display: flex;
+    gap: 10px;
+    height: 30px;
+}
+#to-do{ /* 입력 받는 바 디자인 */
+    border: none;
+    box-shadow: 0 0.5px;
+    flex: 2;
+}
+
+.list{
+    margin-top: 10px;
+}
+
+    /* 추가 버튼 */
+.addTodo{ 
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff ;
+    padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
+}
+/* +모양 추가 */
+.bar1,.bar2{
+    position: absolute;
+    background-color: #4966ff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 2px;
+}
+.bar1{width: 2px;
+    height: 10px;}
+    .bar2{
+        width: 10px; 
+    height: 2px;
+    }
+/* list  */
+ul{
+    line-height: 2;   
+}
+li{
+    height: 25px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+li>span{
+    flex: 8;
+}
+
+
+
+/* 완료 / 삭제 버튼 */
+.delbtn{ /* 삭제 버튼 디자인 */
+    margin-left: 10px;
+    border: none;
+    background: none;
+    color: #4966ff;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 25px;
+    height: 25px;
+    float: right;
+    
+}
+ /*완료 버튼 디자인 */
+/* .combtn[type='checkbox']{   
+    width: 20px;
+    height: 20px;
+} */
+.combtn2{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #4966ff;
+    cursor: pointer;
+}
+.combtn_bar1,.combtn_bar2{ /* 체크 원 안에 v자 디자인 */
+    position: absolute;
+    height: 2px;
+    background: #4966ff;
+    border-radius: 2px;
+    transition: 0.1s;
+    
+}
+.combtn_bar1{
+    width: 6px;
+    left: 18%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transform: rotate(45deg);
+}
+.combtn_bar2{
+    width: 10px;
+    left: 35%;
+    top: 49%;
+    transform: translate(-50%,-50%);
+    transform: rotate(135deg);
+}
+
+button i{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.complete{
+    text-decoration: line-through;
+}
+
