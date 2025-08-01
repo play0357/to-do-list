@@ -1,3 +1,37 @@
-body{
+/* 메인 콘텐츠 설정 */
+#whole-wrapper{
+    /* 전체 요소 플렉스 박스로 정렬 */
     display: flex;
+}
+
+#contents-wrapper{
+    /* 메인 콘텐츠 기본 스타일 설정 */
+    padding: 30px 150px;
+    margin: 15px;
+    gap: 10px;
+    line-height: 2;
+    border: 1px solid;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+#contents-wrapper>header{ /* 메인 컨텐츠 헤더 */
+    flex: 2;
+    border: 1px solid;
+}
+#contents-wrapper>header>.week{
+    display: flex;
+    justify-content: space-around;
+}
+.week>.day{
+    border: 1px solid;
+    flex: 1;
+}
+#contents-wrapper>main{ /* 메인 콘텐츠 바디 */
+    border: 1px solid;
+    flex: 6;
+}
+#contents-wrapper>footer{/* 메인 콘텐츠 footer */
+    border: 1px solid;
+    flex: 1;
 }
