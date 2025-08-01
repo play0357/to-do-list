@@ -1,33 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- fav 아이콘 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
+    <!-- 스타일 css가져오기 -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/sidebar.css">
-    
-</head>
-<body>
-    <header>
-        <nav>
-            <search>
-                검색
-            </search>
-            <section>
-                관리
-            </section>
-        </nav>
-        
-    </header>
-    <main>
-        <section>날짜/시간 별 정렬기능, </section>
-        <section>내가 만든 todolist 목록</section>
-    </main>
-    <footer>이메일/연락처/로고/주소 등</footer>
 
+</head>
+
+<body>
+    <div id="whole-wrapper">
+        <!-- 좌측 사이드바  -->
+        <nav>
+            <div id="sidebar-main">
+                <div id="sidebar-top"> <!-- 사이드바 닫기/열기 버튼 -->
+                    <button id="sidebar_lock"><i class="fas fa-chevron-left"></i></button>
+                </div>
+                <search>
+                    <button><i class="fas fa-search"></i> 검색</button>
+                </search>
+                <section>
+                    <button><i class="fas fa-box"></i> 관리</button>
+                </section>
+                <section>
+                    <button><i class="fas fa-gear"></i> 환경설정</button>
+                </section>
+            </div>
+
+            <div class="sidebar-footer">
+                <button><i></i> 도움말 & 리소스</button>
+            </div>
+        </nav>
+        <div id="contents-wrapper">
+            <header><!-- 달력 혹은 다른 방법으로 날짜 보이기 -->
+                <h1>달력 만들기</h1>
+                <div class="week">
+                <div class="day" data-date="0"><a href="#">일</a></div>
+                <div class="day" data-date="1"><a href="#">월</a></div>
+                <div class="day" data-date="2"><a href="#">화</a></div>
+                <div class="day" data-date="3"><a href="#">수</a></div>
+                <div class="day" data-date="4"><a href="#">목</a></div>
+                <div class="day" data-date="5"><a href="#">금</a></div>
+                <div class="day" data-date="6"><a href="#">토</a></div>
+                </div>
+                
+            </header>
+
+            <main aria-label="메인 콘텐츠">
+                <section> <!-- 오늘 할 일 보이기 -->
+                    <h2>오늘</h2>
+                    <div id="count-task">남은 작업 개수</div>
+                </section>
+                <!-- 투두리스트 추가 + 제거 설정 구역 -->
+                <section>내가 만든 todolist 목록</section>
+                <section>목록이 없으면 작업추가 버튼 만들기
+                    <button>+ 작업 추가</button>
+                </section>
+
+            </main>
+            <footer>이메일/연락처/로고/주소 등</footer>
+        </div>
+    </div>
 
     <script src="js/index.js"></script>
+    <script src="js/calender.js"></script>
 </body>
+
 </html>
