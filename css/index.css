@@ -24,8 +24,16 @@
     justify-content: space-around;
 }
 .week>.day{
+    /* 기본 달력 레이아웃 */
     border: 1px solid;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+}
+.DayBox{
+    border: 1px solid;
+    flex: 2;
 }
 #contents-wrapper>main{ /* 메인 콘텐츠 바디 */
     border: 1px solid;
