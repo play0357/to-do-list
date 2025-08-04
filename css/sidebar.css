@@ -1,7 +1,47 @@
-header{
+/* 변수 설정 */
+:root{
+    --shadowColor: #ccc;
+    --sidebarColor: #f0f7ff;
+    --iconColor: #4966ff;
+}
+/* 좌측 사이드바 */
+nav{
     display: flex;
     flex-direction: column;
-    height: 1200px;
-    width: 200px ;
-    border-right: 1px solid;
+    justify-content: space-between;
+    height: 100vh;
+    width: 300px;
+    box-shadow: 0.1px 0 2px 0 var(--shadowColor);
+    background-color: var(--sidebarColor);
+    gap: 10px;
+    padding-left: 25px;
+}
+#sidebar-main>#sidebar-top{
+    height: 50px;
+}
+
+/* 사이드바 버튼 설정 */
+nav button{
+    /* 기본 스타일 설정 */
+    padding: 5px;
+    text-align: left;
+    font-size: 1em;
+    font-weight: 350;
+    
+}
+#sidebar_lock{ /* 상단 사이드바 */
+    width: auto;
+    float: right;
+    
+}
+/* 사이드바 버튼 아이콘 스타일 변경 */
+button svg{
+    color: transparent;
+    stroke: #000;
+    stroke-width: 20px;
+}
+/* 사이드바 푸터 */
+nav>.sidebar-footer{
+    margin-bottom: 15px;
+    
 }
