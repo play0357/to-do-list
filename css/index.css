@@ -1,3 +1,9 @@
+/* 변수 설정 */
+:root{
+    --shadowColor: #ccc;
+    --sidebarColor: #f0f7ff;
+    --iconColor: #4966ff;
+}
 /* 메인 콘텐츠 설정 */
 #whole-wrapper{
     /* 전체 요소 플렉스 박스로 정렬 */
@@ -34,6 +40,14 @@
 .DayBox{
     border: 1px solid;
     flex: 2;
+}
+/* 달력 생성시 오늘 객체 버튼 css */
+.today{
+    color: var(--iconColor);
+}
+/* 날짜 선택시 css 추가 */
+.selectDay{
+    color: var(--iconColor);
 }
 #contents-wrapper>main{ /* 메인 콘텐츠 바디 */
     border: 1px solid;

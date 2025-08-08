@@ -3,18 +3,21 @@
     --shadowColor: #ccc;
     --sidebarColor: #f0f7ff;
     --iconColor: #4966ff;
+    --sidebarWidth: 300px;
 }
-/* 좌측 사이드바 */
+/* 좌측 사이드바 기본 레이아웃*/
 nav{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    width: 300px;
+    width: var(--sidebarWidth);
     box-shadow: 0.1px 0 2px 0 var(--shadowColor);
     background-color: var(--sidebarColor);
     gap: 10px;
     padding-left: 25px;
+    transition: 1s;
+    z-index: 3;
 }
 #sidebar-main>#sidebar-top{
     height: 50px;
@@ -29,10 +32,19 @@ nav button{
     font-weight: 350;
     
 }
-#sidebar_lock{ /* 상단 사이드바 */
+#sidebar_lock{ 
+    /* 상단 사이드바 닫기 버튼*/
     width: auto;
     float: right;
     
+}
+#sidebar_open{
+    position: absolute;
+    z-index: 2;
+    padding: 5px;
+    text-align: left;
+    font-size: 1em;
+    font-weight: 350;
 }
 /* 사이드바 버튼 아이콘 스타일 변경 */
 button svg{
