@@ -3,7 +3,7 @@
     --shadowColor: #ccc;
     --sidebarColor: #f0f7ff;
     --iconColor: #4966ff;
-    --sidebarWidth: 300px;
+    --sidebarWidth: 250px;
 }
 /* 좌측 사이드바 기본 레이아웃*/
 nav{
@@ -16,13 +16,22 @@ nav{
     background-color: var(--sidebarColor);
     gap: 10px;
     padding-left: 25px;
-    transition: 1s;
+    transition: 0.3s;
     z-index: 3;
 }
 #sidebar-main>#sidebar-top{
     height: 50px;
 }
-
+section.addTask {/* 작업 추가 버튼 css */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    
+}
+section.sidebar-menu{ /* 사이드바 메뉴 */
+    display: flex;
+    flex-direction: column;
+}
 /* 사이드바 버튼 설정 */
 nav button{
     /* 기본 스타일 설정 */
@@ -30,21 +39,42 @@ nav button{
     text-align: left;
     font-size: 1em;
     font-weight: 350;
-    
+    margin-right: 10px;
+    border-radius: 5px;
+}
+nav button:hover{
+    background-color: #4966ff;
+    color: #fff;
+}
+nav button:hover svg{
+    color: transparent;
+    stroke: #fff;
+    stroke-width: 20px;
 }
 #sidebar_lock{ 
     /* 상단 사이드바 닫기 버튼*/
     width: auto;
     float: right;
-    
+    margin-top: 5px;
 }
-#sidebar_open{
+#sidebar_open{ /* 사이드바 열기 버튼 */
     position: absolute;
     z-index: 2;
     padding: 5px;
     text-align: left;
     font-size: 1em;
     font-weight: 350;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+#sidebar_open:hover{
+    background-color: #4966ff;
+    color: #fff;
+}
+#sidebar_open:hover svg{
+    color: transparent;
+    stroke: #fff;
+    stroke-width: 20px;
 }
 /* 사이드바 버튼 아이콘 스타일 변경 */
 button svg{
@@ -55,5 +85,6 @@ button svg{
 /* 사이드바 푸터 */
 nav>.sidebar-footer{
     margin-bottom: 15px;
-    
+    display: flex;
+    flex-direction: column;
 }

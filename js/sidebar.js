@@ -13,22 +13,24 @@ sidebarClose.addEventListener('click', function () {
 function controlSidebar() {
     //사이드바 위치 이동
     const sidebar = document.querySelector('nav');
-    sidebar.style.transform = 'translate(calc(-1*var(--sidebarWidth)), 0)';  
+    const wrapper = document.getElementById('whole-wrapper');
+    sidebar.style.transform = 'translate(calc(-1*var(--sidebarWidth)), 0)';
+    wrapper.classList.add('sidebar-closed'); // 닫힘 클래스 추가  
     //열기 버튼 생성
     const newBtn = document.createElement('button');
     newBtn.id = 'sidebar_open'; //id 부여
     const addIcon = document.createElement('i'); // 열기 icon 생성
     addIcon.className = 'fas fa-chevron-right';
     newBtn.append(addIcon); //열기 버튼에 icon 추가
-    //열기 버튼 생성 위치
-    const whereBtn = document.getElementById('whole-wrapper');   
-    whereBtn.append(newBtn);
+    wrapper.append(newBtn);
+    
     //메인 콘텐츠 레이아웃 변경
-    const background = document.getElementById('whole-wrapper');
+    
     
     /* 사이드바 열기 기능 */
     newBtn.addEventListener('click', function(){//사이드바 원래 위치로 이동
-        sidebar.style.transform = 'translate(0, 0)'; 
+        sidebar.style.transform = 'translate(0, 0)';
+        wrapper.classList.remove('sidebar-closed'); // 열 때 클래스 제거 
         setTimeout(() => {
             newBtn.remove(); //겹침 방지
         }, 300);
